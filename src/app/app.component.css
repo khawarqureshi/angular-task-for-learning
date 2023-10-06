@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.title {
+  text-align: center;
+  margin: 2rem;
+}
