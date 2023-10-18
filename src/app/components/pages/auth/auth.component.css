@@ -1,0 +1,8 @@
+.conainer {
+  display: flex;
+  justify-content: center;
+}
+.form > div {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,49 @@
+<p>auth works!</p>
+<div class="conainer">
+    <form [formGroup]="myForm" class="form" (ngSubmit)="submitData()">
+        <div>
+            <label for=""> Name </label>
+            <input type="name" minlength="4" name="" formControlName="name" id="">
+        </div>
+        <!-- <p>Name is {{name.value}}</p> -->
+        <div>
+            <label for=""> Email </label>
+            <input type="email" name="" formControlName="email" id="">
+        </div>
+        <div>
+            <label for=""> password </label>
+            <input type="password" name="" formControlName="password" id="">
+        </div>
+
+
+
+
+        <!-- <div>
+            <input type="text" id="name" name="name" class="form-control" required minlength="4" appForbiddenName="bob"
+                [(ngModel)]="hero.name" #name="ngModel">
+
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+
+                <div *ngIf="name.errors?.['required']">
+                    Name is required.
+                </div>
+                <div *ngIf="name.errors?.['minlength']">
+                    Name must be at least 4 characters long.
+                </div>
+                <div *ngIf="name.errors?.['forbiddenName']">
+                    Name cannot be Bob.
+                </div>
+
+            </div>
+
+        </div> -->
+
+        <p style="color:#808080">Complete the form to enable button.</p>
+
+
+        <button type="submit" [disabled]="!myForm.valid"> Submit</button>
+
+
+        <p>Form Status: {{ myForm.status }}</p>
+    </form>
+</div>
