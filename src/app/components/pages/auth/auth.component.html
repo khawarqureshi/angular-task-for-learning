@@ -3,40 +3,27 @@
     <form [formGroup]="myForm" class="form" (ngSubmit)="submitData()">
         <div>
             <label for=""> Name </label>
-            <input type="name" minlength="4" name="" formControlName="name" id="">
+            <input type="name" name="" formControlName="name" id="">
+            <br>
+            <span style="color: red;" *ngIf="name && name.invalid && name.dirty"> This input field is not valid.</span>
         </div>
-        <!-- <p>Name is {{name.value}}</p> -->
+
         <div>
             <label for=""> Email </label>
             <input type="email" name="" formControlName="email" id="">
+            <br>
+            <span style="color: red;" *ngIf="email && email.invalid && email.dirty">This input field is not
+                valid.</span>
         </div>
         <div>
             <label for=""> password </label>
             <input type="password" name="" formControlName="password" id="">
+            <br>
+            <span style="color: red;" *ngIf="password && password.invalid && password.dirty">This input field is
+                invalid.</span>
         </div>
 
 
-
-
-        <!-- <div>
-            <input type="text" id="name" name="name" class="form-control" required minlength="4" appForbiddenName="bob"
-                [(ngModel)]="hero.name" #name="ngModel">
-
-            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
-
-                <div *ngIf="name.errors?.['required']">
-                    Name is required.
-                </div>
-                <div *ngIf="name.errors?.['minlength']">
-                    Name must be at least 4 characters long.
-                </div>
-                <div *ngIf="name.errors?.['forbiddenName']">
-                    Name cannot be Bob.
-                </div>
-
-            </div>
-
-        </div> -->
 
         <p style="color:#808080">Complete the form to enable button.</p>
 
